@@ -1,0 +1,22 @@
+.dark-mode {
+    background-color: #000;
+    /* Đổi màu nền sang đen */
+    color: #090909;
+
+    /* Đổi màu chữ sang trắng */
+    /* Thêm các style khác tương ứng với chế độ tối */
+    .about-section {
+        background-color: #2d2d2d;
+        color: aliceblue;
+
+    }
+    .about-section h3 {
+        color: aliceblue;
+
+    }
+    .contact-section {
+        background-color: #2d2d2d;
+        color: aliceblue;
+    }
+ 
+}
