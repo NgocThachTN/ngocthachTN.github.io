@@ -333,5 +333,27 @@ function showAlertBox(response, message) {
     $alContainer.fadeIn(300).delay(2000).fadeOut(400);
 }
 
-   
+ //dark mode
+ document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    // Check for saved user preference, if any, on load of the website
+    const savedMode = localStorage.getItem('dark-mode');
+    if (savedMode && savedMode === 'enabled') {
+        body.classList.add('dark-mode');
+        toggle.checked = true;
+    }
+
+    toggle.addEventListener('change', function () {
+        if (toggle.checked) {
+            body.classList.add('dark-mode');
+            localStorage.setItem('dark-mode', 'enabled');
+        } else {
+            body.classList.remove('dark-mode');
+            localStorage.setItem('dark-mode', 'disabled');
+        }
+    });
+});
+  
 
